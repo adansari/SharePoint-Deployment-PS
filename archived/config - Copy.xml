@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exe>
+  <solutions>
+    <!--<solution id="PublicisGroupe.EmailSignature.GADClient.wsp" path="\PublicisGroupe.EmailSignature.GADClient.wsp"/>-->
+    <solution id="PublicisGroupe.EmailSignature.BackOffice.wsp" path="\PublicisGroupe.EmailSignature.BackOffice.wsp" webapp="http://01hw724460"/>
+    <solution id="PublicisGroupe.EmailSignature.Web.UI.wsp" path="\PublicisGroupe.EmailSignature.Web.UI.wsp" webapp="http://01hw724460"/>
+  </solutions>
+  <webapps>
+    <webapp url="http://01hw724460:80">
+      <features>
+        <feature name="PublicisGroupe.EmailSignature.GADClient_GADClient.TimerJob" mode="skip"/><!-- act OR re-act OR skip-->
+      </features>
+      <sites>
+        <site title="Email Signature" url="http://01hw724460" admin="INDIA\895272" temp="STS#0">
+          <features>
+            <feature name="PublicisGroupe.EmailSignature.BackOffice_Bootstrap" mode="re-act"/>
+            <feature name="PublicisGroupe.EmailSignature.BackOffice_Webparts" mode="re-act"/>
+            <feature name="PublicisGroupe.EmailSignature.Web.UI_Webparts" mode="re-act"/>
+          </features>
+          <webs>
+            <web url="">
+              <features>
+                <feature name="PublicisGroupe.EmailSignature.GADClient_ListDefinations" mode="re-act"/><!-- act OR re-act OR skip-->
+                <feature name="PublicisGroupe.EmailSignature.BackOffice_ListDefinations" mode="re-act"/><!-- act OR re-act OR skip-->
+              </features>
+            </web>
+          </webs>
+        </site>
+      </sites>
+    </webapp>
+  </webapps>
+</exe>
