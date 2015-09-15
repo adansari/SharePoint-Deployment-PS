@@ -2,43 +2,20 @@
 Configurable Oneclick SharePoint deployment powershell scripts
 
 
-PowerShell Config XML Nodes:
-1. Solutions  
-Solution
-ID – Name of the WSP file which need to be deployed.
-PATH – Physical path for WSP file where needs to be deployed.
-WEBAPP – URL of the web application where WSP will be deployed.
+Solutions: This folder contains all the WSPs to be deployed by the PowerShell, Build   the solution and put latest WSP in this folder.
 
-2. Webapps (All the Web apps must exist before the execution of this script)
-Webapp 
-URL – Web application URL
+Sub: This folder contains the all PowerShell scripts.
 
-Features / Feature
-ID – Unique id for the feature to be deployed
-Name – Name of the feature
-Mode – contains value “act” or “skip” defined whether feature need to be activated or skipped. Default is “act”
+Config.xml: This is a XML configuration file used by PowerShell installer, please confirm the URLs and Account details provided in this XML, for more details refer to attached word docx file.
 
-Sites / Site (Site collections will be created by script and will confirm to overwrite incase if it’s already exists)
-TITLE   – Title of the site collection
-URL     –  URL for the site collection
-ADMIN – Account name for the admin of the site 
-Temp   – Template type for site which need to be created for
-               
-Features / Feature
-ID – Unique id for the feature to be deployed.
-Name – Name of the feature.
-Mode – contains value “act” or “skip” defined whether feature need to be activated or skipped. Default is “act”.
+1deploy.ps1: This is a PowerShell scripts which to deploy the WSPs to the farm.
 
-Webs / Web (Sub sites will be created by script and will confirm to overwrite incase if it’s already exists)
-Title – Title of the sub site.
-URL – Relative URL for the sub site if any. 
-HOMEPAGE – Relative URL for the page which will be set as HOME PAGE for the Sub site
-TEMP – Template type for site which need to be created for e.g. Publishing site / Team site etc.
+configure.ps1: This is a PowerShell scripts which to deploy the WSPs to the farm.
+       
+     2.       Installation:
 
-Propertybag / Property (InnerXML of this tag will contain “Value” for the key )
-Key – “key” name for the property to be added.
-
-Features / Feature
-ID – Unique id for the feature to be deployed.
-Name – Name of the feature.
-Mode – contains value “act” or “skip” defined whether feature need to be activated or skipped. Default is “act”.
+      a.      User with appropriate permissions can open the Windows PowerShell console.
+      b.      Navigate to the package folder and run the 1deploy.ps1
+      c.      Once 1deploy.ps1 completes the execution successfully close the Windows PowerShell console and reopen it again.
+      d.      Navigate to the package folder and run the 2configure.ps1
+      e.      Successful execution of the 2configure.ps1 completes the installation.
