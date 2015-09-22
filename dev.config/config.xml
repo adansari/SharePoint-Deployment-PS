@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <exe>
   <solutions>
-    <solution id="PublicisGroupe.EmailSignature.GADClient.wsp" path="\PublicisGroupe.EmailSignature.GADClient.wsp"/>
-    <solution id="PublicisGroupe.EmailSignature.BackOffice.wsp" path="\PublicisGroupe.EmailSignature.BackOffice.wsp" webapp="https://devintranet.lionresources.com"/>
-    <solution id="PublicisGroupe.EmailSignature.Web.UI.wsp" path="\PublicisGroupe.EmailSignature.Web.UI.wsp" webapp="https://devintranet.lionresources.com"/>
-    <solution id="PublicisGroupe.EmailSignature.Service.wsp" path="\PublicisGroupe.EmailSignature.Service.wsp"/> 
+    <solution id="Company.Dept.App.Module1.wsp" path="\Company.Dept.App.Module1.wsp"/>
+    <solution id="Company.Dept.App.Module2.wsp" path="\Company.Dept.App.Module2.wsp" webapp="https://spserver.com"/>
+    <solution id="Company.Dept.App.Module3.wsp" path="\Company.Dept.App.Module3.wsp" webapp="https://spserver.com"/>
+    <solution id="Company.Dept.App.Module4.wsp" path="\Company.Dept.App.Module4.wsp"/> 
   </solutions>
   <webapps>
-    <webapp url="https://devintranet.lionresources.com">
+    <webapp url="https://spserver.com">
       <features>
-        <feature id="497840b7-7c34-4cfe-a051-272a0e6b9dd3" name="PublicisGroupe.EmailSignature.GADClient_GADClient.TimerJob" mode="act"/><!-- act OR skip-->
+        <feature id="497840b7-7c34-4cfe-a051-272a0e6b9dd3" name="Feature.TimerJob" mode="act"/><!-- act OR skip-->
       </features>
       <sites>
-        <site title="Email Signature" url="https://devintranet.lionresources.com" admin="" temp="BLANKINTERNET#0" confirmRecreate="false">
+        <site title="Email Signature" url="https://spserver.com" admin="" temp="BLANKINTERNET#0" confirmRecreate="false">
           <features>
-            <feature id="afc8f78c-b993-490a-8cf4-18dd5e526f18" name="PublicisGroupe.EmailSignature.BackOffice_Webparts" mode="act"/><!-- act OR skip-->
-            <feature id="3f2bdb9b-2de4-48fd-9f55-c1f2446af2f8" name="PublicisGroupe.EmailSignature.Web.UI_Webparts" mode="act"/><!-- act OR skip-->
+            <feature id="afc8f78c-b993-490a-8cf4-18dd5e526f18" name="Feature.Webparts1" mode="act"/><!-- act OR skip-->
+            <feature id="3f2bdb9b-2de4-48fd-9f55-c1f2446af2f8" name="Feature.Webparts2" mode="act"/><!-- act OR skip-->
           </features>
           <webs>
-            <web url="/emailsignature" title="Email Signature" homepage="SitePages/Redirect.aspx" temp="BLANKINTERNET#0">
+            <web url="/subweb" title="Email Signature" homepage="SitePages/Redirect.aspx" temp="BLANKINTERNET#0">
               <propertybag>
-                <property key="emailsignature.ewsurl">https://mail.publicisgroupe.net/ews/exchange.asmx</property>
-                <property key="emailsignature.ewsuseragent">OutlookEmailSignatureAddIn</property>
-                <property key="emailsignature.picturelibrarytitle">EmailSignature</property>
-                <property key="emailsignature.picturelibraryurl">https://devmy.glbportal.com/EmailSignature</property>
-                <property key="emailsignature.picturelibraryadmin">i:0ǵ.t|globalportaladfs|svc_emea_devemailsig</property>
+                <property key="p1">value1</property>
+                <property key="p2">value2</property>
+                <property key="p3">value3</property>
               </propertybag>
               <features>
-                <feature id="6be506a8-ed2f-4e65-b2d8-b706e1d97d17" name="PublicisGroupe.EmailSignature.GADClient_ListDefinations" mode="act"/><!-- act OR skip-->
-                <feature id="786644aa-0559-4515-8d62-88048a3cf435" name="PublicisGroupe.EmailSignature.BackOffice_ListDefinations" mode="act"/><!-- act OR skip-->
-                <feature id="655de41c-6fea-4eda-8005-32dfe288dd43" name="PublicisGroupe.EmailSignature.BackOffice_Bootstrap" mode="act"/><!-- act OR skip-->
-                <feature id="8e4c32c3-e79d-460a-bd4b-37a0872f3a95" name="PublicisGroupe.EmailSignature.Web.UI_Bootstrap" mode="act"/><!-- act OR skip-->
+                <feature id="6be506a8-ed2f-4e65-b2d8-b706e1d97d17" name="Feature.ListDefinations" mode="act"/><!-- act OR skip-->
+                <feature id="655de41c-6fea-4eda-8005-32dfe288dd43" name="Feature.Bootstrap" mode="act"/><!-- act OR skip-->
               </features>
             </web>
           </webs>
