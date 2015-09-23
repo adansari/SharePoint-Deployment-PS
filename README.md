@@ -8,11 +8,11 @@ Sub: This folder contains the all PowerShell scripts.
 
 Config.xml: This is a XML configuration file used by PowerShell installer, please confirm the URLs and Account details provided in this XML, for more details refer to attached word docx file.
 
-1deploy.ps1: This is a PowerShell scripts which to deploy the WSPs to the farm.
+deploy.ps1: This is a PowerShell scripts which to deploy the WSPs to the farm.
 
 configure.ps1: This is a PowerShell scripts which to deploy the WSPs to the farm.
        
-     2.       Installation:
+Installation:
 
       a.      User with appropriate permissions can open the Windows PowerShell console.
       b.      Navigate to the package folder and run the 1deploy.ps1
