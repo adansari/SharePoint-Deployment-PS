@@ -1,4 +1,4 @@
-# SharePoint Deployment PowerShell
+# SharePoint Auto Deployment PowerShell
 Configurable Oneclick SharePoint deployment powershell scripts
 
 
